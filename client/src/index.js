@@ -6,7 +6,7 @@ import { Provider } from 'react-redux';
 import { createStore, applyMiddleware, compose } from 'redux';
 import './styles/index.css';
 import App from './components/App';
-import registerServiceWorker from './registerServiceWorker';
+import * as serviceWorker from './serviceWorker';
 
 const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
@@ -21,4 +21,4 @@ ReactDOM.render(
     <App />
   </Provider>
   , document.getElementById('root'));
-registerServiceWorker();
+serviceWorker.unregister();

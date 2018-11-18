@@ -14,6 +14,13 @@ mongoose.Promise = global.Promise;
 mongoose.connect(keys.mongodbURI);
 
 app.use(express.static('client/public'));
+app.use(express.json());
+app.use(cookieSession({
+  maxAge: 30 * 24 * 60 * 60 * 1000,
+  keys: [keys.cookieKey]
+}));
+app.use(passport.initialize());
+app.use(passport.session());
 
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static(path.resolve(__dirname, 'client', 'build')));

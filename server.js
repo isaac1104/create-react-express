@@ -8,7 +8,7 @@ const path = require('path');
 const PORT = process.env.PORT || 5000;
 
 require('./models/User');
-require('./utils/passport');
+require('./services/passport');
 
 mongoose.Promise = global.Promise;
 mongoose.connect(keys.mongodbURI);
@@ -16,7 +16,8 @@ mongoose.connect(keys.mongodbURI);
 app.use(express.static('client/public'));
 app.use(express.json());
 app.use(cookieSession({
-  maxAge: 30 * 24 * 60 * 60 * 1000,
+  name: 'session',
+  maxAge: 24 * 60 * 60 * 1000,
   keys: [keys.cookieKey]
 }));
 app.use(passport.initialize());

@@ -16,7 +16,7 @@ cd client
 npm install
 cd ..
 npm run dev
-``
+```
 
 That's it, your app should be running on <http://localhost:3000>. The Express server should intercept any AJAX requests from the client.
 
@@ -57,13 +57,23 @@ npm run build
 ```
 
 2. Add and commit all changes to git
+
 ```
 git add -A
 git commit -m "commit message:
 ```
 3. Push to Heroku
+
 ```
 git push heroku master
+```
+4. Make sure to add `Config Vars` for your Heroku app on dashboard under settings
+* The key/value pairs must match the content inside your `dev.js` file.
+
+```
+GOOGLE_CLIENT_ID: 'YOUR_GOOGLE_CLIENT_ID
+GOOGLE_CLIENT_SECRET: 'YOUR_GOOGLE_CLIENT_SECRET
+MONGODB_URI: 'YOUR_MONGODB_URI
 ```
 
 If all previous steps were followed correctly, your application should be deployed to Heroku!

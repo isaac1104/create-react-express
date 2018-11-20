@@ -7,4 +7,4 @@ const userSchema = new Schema({
   avatar: String
 });
 
-mongoose.model('User', userSchema);
+mongoose.model('users', userSchema);

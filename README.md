@@ -43,7 +43,7 @@ Inside the config folder on the root directory, create a file named `dev.js` wit
 module.exports = {
   googleClientID: 'YOUR_GOOGLE_CLIENT_ID',
   googleClientSecret: 'YOUR_GOOGLE_CLIENT_SECRET', 
-  mongodbURI: 'YOUR_MONGODB_URI', <--
+  mongodbURI: 'YOUR_MONGODB_URI', 
   cookieKey: 'RANDOM_STRING',
 };
 ```

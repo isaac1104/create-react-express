@@ -4,24 +4,19 @@
 
 This setup allows for a Node/Express/React app which can be easily deployed to Heroku.
 
-The front-end React app will auto-reload as it's updated via webpack dev server, and the backend Express app will auto-reload independently with nodemon.
+Also has Google OAuth setup for easy authentication using your Google account.
 
 ## Starting the app locally
 
 Start by installing front and backend dependencies. While in this directory, run the following commands:
 
 ```
-yarn install
+npm install
 cd client
-yarn install
+npm install
 cd ..
+npm run dev
 ``
-
-After both installations complete, run the following command in your terminal:
-
-```
-yarn start
-```
 
 That's it, your app should be running on <http://localhost:3000>. The Express server should intercept any AJAX requests from the client.
 
@@ -53,32 +48,22 @@ heroku myawesomeapp
 
 ### Deploying
 
-#### Option 1
-
-Use the deploy script inside of the outer `package.json`
-
-After confirming that you have an up to date git repository and a Heroku app created, run the following command to deploy:
-
-```
-yarn deploy
-```
-
-If all previous steps were followed correctly, your application should be deployed to Heroku!
-
-#### Option 2
-
-Manually deploy 
-
 After confirming that you have an up to date git repository and a Heroku app created, complete the following:
 
 1. Build the React app for production by running the following command:
 
 ```
-yarn build
+npm run build
 ```
 
 2. Add and commit all changes to git
-
+```
+git add -A
+git commit -m "commit message:
+```
 3. Push to Heroku
+```
+git push heroku master
+```
 
 If all previous steps were followed correctly, your application should be deployed to Heroku!

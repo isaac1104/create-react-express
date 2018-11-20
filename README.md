@@ -37,7 +37,7 @@ npm install
 cd ..
 ```
 
-Inside the config folder on the root directory, create a file named `dev.js` with contents as follows.
+Inside the config folder on the root directory, create a file named `dev.js` with key/value pairs as below.
 
 ```
 module.exports = {

@@ -48,7 +48,11 @@ module.exports = {
 };
 ```
 
-That's it, your app should be running on <http://localhost:3000>. The Express server should intercept any AJAX requests from the client.
+After all the setup, run this command to start the app.
+
+``` npm run dev ```
+
+Your app should automatically open on <http://localhost:3000>. The Express server should intercept any AJAX requests from the client.
 
 ## Deployment (Heroku)
 

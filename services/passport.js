@@ -25,17 +25,18 @@ passport.use(
     async (accesstoken, refreshToken, profile, done) => {
       const currentUser = await User.findOne({ googleId: profile.id });
       if (currentUser) {
-        return done(null, currentUser);
+        done(null, currentUser);
+      } else {
+        const user = await new User({
+          googleId: profile.id,
+          displayName: profile.displayName,
+          firstName: profile.name.givenName,
+          lastName: profile.name.familyName,
+          email: profile.emails[0].value || '',
+          avatar: profile.photos[0].value || ''
+        }).save();
+        done(null, user);
       }
-      const user = await new User({
-        googleId: profile.id,
-        displayName: profile.displayName,
-        firstName: profile.name.givenName,
-        lastName: profile.name.familyName,
-        email: profile.emails[0].value || '',
-        avatar: profile.photos[0].value || ''
-      }).save();
-      done(null, user);
     }
   )
 );

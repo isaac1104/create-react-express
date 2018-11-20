@@ -2,9 +2,29 @@
 
 ## About This Boilerplate
 
-This setup allows for a Node/Express/React app which can be easily deployed to Heroku.
+This setup is for those who want to develop a fullstack React app with Node/Express backend.
+Very easy to setup and also comes with Google OAuth out of the box.
 
-Also has Google OAuth setup for easy authentication using your Google account.
+## Tech Stack
+
+Here is the list of packages / techs used in the boilerplate.
+
+```
+Frontend
+
+* React
+* Redux
+* React-Router
+* Redux-Form
+
+Backend
+
+* Node
+* Express
+* Mongodb
+* Passport.js 
+
+```
 
 ## Starting the app locally
 
@@ -15,7 +35,17 @@ npm install
 cd client
 npm install
 cd ..
-npm run dev
+```
+
+Inside the config folder on the root directory, create a file named `dev.js` with contents as follows.
+
+```
+module.exports = {
+  googleClientID: 'YOUR_GOOGLE_CLIENT_ID',
+  googleClientSecret: 'YOUR_GOOGLE_CLIENT_SECRET', 
+  mongodbURI: 'YOUR_MONGODB_URI', <--
+  cookieKey: 'RANDOM_STRING',
+};
 ```
 
 That's it, your app should be running on <http://localhost:3000>. The Express server should intercept any AJAX requests from the client.

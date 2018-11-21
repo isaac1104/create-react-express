@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 class App extends Component {
   render() {
@@ -14,7 +15,7 @@ class App extends Component {
       }
     };
 
-    return (
+    const Landing = () => (
       <div style={styles.container}>
         <div>
           <h1>Welcome to Fullstack React Boilerplate with <code>Node</code> and <code>Express</code></h1>
@@ -23,6 +24,14 @@ class App extends Component {
           <p>Please check inside of the two <code>package.json</code> files to see the list of dependencies that are being used.</p>
         </div>
       </div>
+    );
+
+    return (
+      <BrowserRouter>
+        <Switch>
+          <Route exact path='/' component={Landing} />
+        </Switch>
+      </BrowserRouter>
     );
   }
 }

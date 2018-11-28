@@ -8,12 +8,13 @@ import './styles/index.css';
 import App from './components/App';
 import * as serviceWorker from './serviceWorker';
 
-const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+// const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 const store = createStore(
   rootReducer,
   {},
-  composeEnhancer(applyMiddleware(reduxThunk))
+  // composeEnhancer(applyMiddleware(reduxThunk))
+  applyMiddleware(reduxThunk)
 );
 
 ReactDOM.render(

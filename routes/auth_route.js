@@ -7,7 +7,7 @@ module.exports = app => {
     res.redirect('/');
   });
   app.get('/api/current_user', (req, res) => {
-    res.send(req.user);
+    res.status(200).send(req.user);
   });
   app.get('/api/signout', (req, res) => {
     req.logout();

@@ -1,5 +1,6 @@
 const express = require('express');
 const passport = require('passport');
+const helmet = require('helmet');
 const cookieSession = require('cookie-session');
 const mongoose = require('mongoose');
 const keys = require('./config/keys');
@@ -13,6 +14,7 @@ require('./services/passport');
 mongoose.Promise = global.Promise;
 mongoose.connect(keys.mongodbURI);
 
+app.use(helmet());
 app.use(express.json());
 app.use(cookieSession({
   name: 'session',

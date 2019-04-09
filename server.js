@@ -48,5 +48,4 @@ module.exports = {
   mongodbURI: 'YOUR_MONGODB_URI',
   cookieKey: 'RANDOM_STRING',
 };
-
 */

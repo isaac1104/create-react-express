@@ -33,7 +33,8 @@ passport.use(
         firstName: profile.name.givenName,
         lastName: profile.name.familyName,
         email: profile.emails[0].value || '',
-        avatar: profile.photos[0].value || ''
+        avatar: profile.photos[0].value || '',
+        lastSignedIn: Date.now()
       }).save();
       done(null, user);
     }

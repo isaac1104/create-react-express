@@ -13,7 +13,8 @@ const userSchema = new Schema({
   displayName: String,
   firstName: String,
   lastName: String,
-  avatar: String
+  avatar: String,
+  lastSignedIn: Number
 });
 
 mongoose.model('User', userSchema);

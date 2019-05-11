@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import Landing from './Landing';
+import Landing from './Landing/Landing';
 
 class App extends Component {
   render() {

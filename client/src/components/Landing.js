@@ -17,8 +17,8 @@ const Landing = () => (
     <div>
       <h1><span role='img' aria-label='computer-emoji'>💻</span> Welcome to Fullstack React Boilerplate</h1>
       <h3>Edit <code>client/src/components/App.js</code> and save to reload.</h3>
-      <h3>Direct the users to <code>/auth/google</code> to authenticate them with Google.</h3>
       <h3>See <code>package.json</code> for the full list of dependencies.</h3>
+      <h3>Click <a href='https://github.com/isaac1104/create-react-express'>here</a> for documentation</h3>
     </div>
   </div>
 );

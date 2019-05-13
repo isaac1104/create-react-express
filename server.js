@@ -12,7 +12,7 @@ require('./models/User');
 require('./services/passport');
 
 mongoose.Promise = global.Promise;
-mongoose.connect(keys.mongodbURI);
+mongoose.connect(keys.mongodbURI, { useNewUrlParser: true });
 
 app.use(helmet());
 app.use(express.json());

@@ -1,8 +1,8 @@
 import React from 'react';
-import classes from './Landing.module.css';
+import styles from './Landing.module.css';
 
 const Landing = () => (
-  <div className={classes.LandingContainer}>
+  <div className={styles.LandingContainer}>
     <div>
       <h1><span role='img' aria-label='computer-emoji'>💻</span> Welcome to Fullstack React Boilerplate</h1>
       <h3>Edit <code>client/src/components/App.js</code> and save to reload.</h3>

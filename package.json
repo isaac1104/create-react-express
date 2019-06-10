@@ -22,7 +22,7 @@
     "cookie-session": "^2.0.0-beta.3",
     "express": "^4.17.1",
     "helmet": "^3.18.0",
-    "mongoose": "^5.5.11",
+    "mongoose": "^5.5.14",
     "passport": "^0.4.0",
     "passport-google-oauth20": "^2.0.0"
   }

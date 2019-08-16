@@ -4,30 +4,24 @@
 
 ## About This Boilerplate
 
-Build your React app using Node and Express with this boilerplate. This boilerplate comes with most of the popular NPM packages, such as `redux`, `react-router-dom`, `axios` and many more out of the box! This boilerplate can effortlessly connect your app to `Mongodb` database and also takes care of authenticating users with `Google OAuth`. (signed-in users' information will be saved into your database)
+Build your React app using Node and Express with this boilerplate. This boilerplate comes with many popular libraries such as `redux`, `react-router-dom`, `axios` and many more out of the box! This boilerplate can effortlessly connect your app to `Mongodb` database and also takes care of authenticating users with `Google OAuth`.
 
 ## 💻 Tech Stack
-
-Here is the list of packages / techs used in the boilerplate.
-
-Full list of dependencies can be found inside `client/package.json` file.
 
 ```
 Frontend
 
 * React
-* Redux
-* React-Router
-* Redux-Form
 
 Backend
 
 * Node
 * Express
 * Mongodb
-* Passport.js 
 
 ```
+
+Full list of dependencies can be found inside `package.json` files.
 
 ## 💻 Starting the app locally
 

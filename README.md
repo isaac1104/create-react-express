@@ -4,7 +4,7 @@
 
 ## About This Boilerplate
 
-Build your React app using Node and Express with this boilerplate. This boilerplate comes with many popular libraries such as `redux`, `react-router-dom`, `axios` and many more out of the box! This boilerplate can effortlessly connect your app to `Mongodb` database and also takes care of authenticating users with `Google OAuth`.
+Build your React app using Node and Express with this boilerplate. This boilerplate comes with many popular libraries such as `redux`, `react-router-dom`, `axios` and many more out of the box!.
 
 ## 💻 Tech Stack
 
@@ -12,12 +12,12 @@ Build your React app using Node and Express with this boilerplate. This boilerpl
 Frontend
 
 * React
+* Redux
 
 Backend
 
 * Node
 * Express
-* Mongodb
 
 ```
 
@@ -34,18 +34,7 @@ npm install
 cd ..
 ```
 
-Inside the config folder on the root directory, create a file named `dev.js` with key/value pairs as below.
-
-```
-module.exports = {
-  googleClientID: 'YOUR_GOOGLE_CLIENT_ID',
-  googleClientSecret: 'YOUR_GOOGLE_CLIENT_SECRET', 
-  mongodbURI: 'YOUR_MONGODB_URI', 
-  cookieKey: 'RANDOM_STRING',
-};
-```
-
-After all the setup, on the root directory, run this command to start the app.
+Once the installation is finished, from the root directory, run the following command to start the app.
 
 ``` npm run dev ```
 
@@ -97,15 +86,6 @@ git commit -m "commit message:
 
 ```
 git push heroku master
-```
-4. Make sure to add `Config Vars` for your Heroku app on dashboard under settings
-* The key/value pairs must match the content inside your `dev.js` file.
-
-```
-GOOGLE_CLIENT_ID: 'YOUR_GOOGLE_CLIENT_ID'
-GOOGLE_CLIENT_SECRET: 'YOUR_GOOGLE_CLIENT_SECRET'
-MONGODB_URI: 'YOUR_MONGODB_URI'
-COOKIE_KEY: 'YOUR_COOKIE_KEY'
 ```
 
 If all previous steps were followed correctly, your application should be deployed to Heroku!
